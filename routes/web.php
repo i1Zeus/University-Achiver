@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\MainPage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/test', function () {
-    return view('test');
-});
+Route::get('Main-Page', MainPage::class);
