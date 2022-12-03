@@ -2,7 +2,8 @@
     <div class="flex  mt-20 justify-between">
         <div class="flex mt-10 w-40% gap-24">
             <div class="flex flex-col gap-80px">
-                <span class="w-600px font-semibold opacity-80 font-Tajawal text-justify text-25px">يوفر لك النظام تصفح
+                <span class="w-600px leading-loose font-semibold opacity-80 font-Tajawal text-justify text-25px">يوفر لك
+                    النظام تصفح
                     وارشفة الندوات والمؤتمرات
                     ومناقشات طلبة
                     الدراسات العليا في كلية علوم الحاسوب و
@@ -29,11 +30,47 @@
                 </div>
             </div>
         </div>
-        <div class="ml-10 w-200">
+        <div class="ml-10 w-180">
             <img src="/image/mainPage.png">
         </div>
     </div>
-    <div class="p-50px mt-10">
+    <div class="p-50px mt-20">
         <livewire:main-page.last-events />
+    </div>
+    <div class="flex justify-center">
+        <div class="w-95 items-center p-10">
+            <nav aria-label="Page navigation example">
+                <ul class="inline-flex -space-x-px">
+                    <li>
+                        <a href="#"
+                            class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">التالي</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-current="page"
+                            class="px-3 py-2 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">السابق</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </div>
