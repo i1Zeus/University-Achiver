@@ -6,7 +6,7 @@
                 الدراسات العليا في كلية علوم الحاسوب و
                 تكنلوجيا المعلومات / جامعة البصرة من سنة 2023</span>
             <input type="text" wire:model="search" placeholder="ابحث عن حدث.."
-                class="w-600px h-60px focus:outline-none focus:ring focus:ring-secondery-200 font-bold rounded-50px">
+                class="w-600px h-60px rounded-2xl focus:outline-none focus:ring focus:ring-secondery-200 font-bold rounded-50px">
         </div>
         <div class="h-10 w-10 bg-black"></div>
     </div>
