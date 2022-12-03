@@ -1,4 +1,5 @@
 <div>
+    <livewire:navbar  />
     <div class="mx-32 mt-44 bg-background-200">
         <div class="flex gap-24">
             <div class="flex flex-col gap-10">

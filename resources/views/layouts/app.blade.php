@@ -22,10 +22,11 @@
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased bg-background-200" dir="rtl">
+<body class="font-Tajawal antialiased bg-background-200" dir="rtl">
     <x-jet-banner />
 
     <div class="min-h-screen bg-gray-100">
+        <livewire:ui.curve  />
         {{-- @livewire('navigation-menu') --}}
 
         <!-- Page Heading -->
@@ -38,7 +39,7 @@
         @endif --}}
 
         <!-- Page Content -->
-        <main>
+        <main class="relative">
             {{ $slot }}
         </main>
     </div>
