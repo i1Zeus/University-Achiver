@@ -17,7 +17,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
 
     <!-- Styles -->
     @livewireStyles
@@ -47,7 +47,7 @@
     </div>
 
     @stack('modals')
-
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
     @livewireScripts
 </body>
 
