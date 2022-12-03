@@ -18,15 +18,17 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://unpkg.com/windicss-runtime-dom"></script>
     <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
 
     <!-- Styles -->
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased bg-background-200" dir="rtl">
+<body class="font-Tajawal antialiased bg-background-200" dir="rtl">
     <x-jet-banner />
 
     <div class="min-h-screen bg-gray-100">
+        <livewire:ui.curve  />
         {{-- @livewire('navigation-menu') --}}
 
         <!-- Page Heading -->
@@ -39,13 +41,14 @@
         @endif --}}
 
         <!-- Page Content -->
-        <main>
+        <main class="relative mx-20 mt-10">
+            <livewire:navbar  />
             {{ $slot }}
         </main>
     </div>
 
     @stack('modals')
-
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
     @livewireScripts
 </body>
 

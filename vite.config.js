@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel, { refreshPaths } from 'laravel-vite-plugin';
+import Unocss from 'unocss/vite';
 
 export default defineConfig({
     plugins: [
@@ -13,5 +14,11 @@ export default defineConfig({
                 'app/Http/Livewire/**',
             ],
         }),
+        Unocss({
+            presets: [
+              /* no presets by default */
+            ],
+            /* options */
+          }),
     ],
 });
