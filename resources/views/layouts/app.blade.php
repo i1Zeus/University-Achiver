@@ -17,6 +17,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
 
     <!-- Styles -->
     @livewireStyles
@@ -39,7 +40,8 @@
         @endif --}}
 
         <!-- Page Content -->
-        <main class="relative">
+        <main class="relative mx-20 mt-10">
+            <livewire:navbar  />
             {{ $slot }}
         </main>
     </div>
