@@ -1,4 +1,5 @@
 <div>
+    {{-- Logo --}}
     <div class="w-full flex justify-between h-20 items-center">
         <div class="flex items-center">
             <div class="w-16 h-16">
