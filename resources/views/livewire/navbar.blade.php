@@ -20,9 +20,15 @@
             <span class="text-5xl font-bold text-white">مكتبة السمنرات</span>
         </div>
         <div class="bx-5 ml-10 justify-between gap-3 font-semibold text-2xl">
-            <span class="p-2 cursor-pointer">الصفحة الرئيسية</span>
-            <span class="p-2 text-black opacity-50  cursor-not-allowed">الارشيف</span>
-            <span class="p-2 text-black opacity-50 cursor-not-allowed">حول</span>
+            <a href="{{ route('main') }}">
+                <span class="p-2 cursor-pointer">الصفحة الرئيسية</span>
+            </a>
+            {{-- <a href="{{ route('archive') }}"> --}}
+                <span class="p-2 text-black opacity-50  cursor-not-allowed">الارشيف</span>
+            {{-- </a> --}}
+            <a href="{{ route('about') }}">
+                <span class="p-2 text-black cursor-pointer">حول</span>
+            </a>
         </div>
     </div>
 </div>

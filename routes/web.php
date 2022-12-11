@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\AboutPage\About;
 use App\Http\Livewire\MainPage\Main;
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -28,4 +25,5 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/', Main::class);
+Route::get('/', Main::class)->name('main');
+Route::get('/about', About::class)->name('about');
