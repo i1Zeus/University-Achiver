@@ -23,9 +23,9 @@
             <a href="{{ route('main') }}">
                 <span class="p-2 cursor-pointer">الصفحة الرئيسية</span>
             </a>
-            {{-- <a href="{{ route('archive') }}"> --}}
-                <span class="p-2 text-black opacity-50  cursor-not-allowed">الارشيف</span>
-            {{-- </a> --}}
+            <a href="{{ route('archive') }}">
+                <span class="p-2 text-black cursor-pointer">الارشيف</span>
+            </a>
             <a href="{{ route('about') }}">
                 <span class="p-2 text-black cursor-pointer">حول</span>
             </a>
