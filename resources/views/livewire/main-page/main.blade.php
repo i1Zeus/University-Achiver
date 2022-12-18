@@ -37,6 +37,7 @@
     <div class="p-50px mt-20">
         <livewire:main-page.last-events />
     </div>
+    
     {{--* Pagination   --}}
     <div class="flex justify-center">
         <div class="w-95 items-center p-10">
