@@ -7,7 +7,7 @@
             @foreach ($events as $event)
                 <livewire:ui.event-card :event="$event" />
             @endforeach --}}
-        <div class="flex gap-15 justify-evenly">
+        <div class="flex gap-12 justify-evenly">
             @for ($i = 1; $i <= 3; $i++)
                 <livewire:ui.event-card />
             @endfor
