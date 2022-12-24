@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>University Archive</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,10 @@
     <script src="https://unpkg.com/windicss-runtime-dom"></script>
     <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
-
+    <link rel="icon" type="image/png" href="image/logo.svg">
+    <!-- <link rel="icon" type="image/png" href="image/archive.png"> -->
     <!-- Styles -->
+    
     @livewireStyles
 </head>
 
