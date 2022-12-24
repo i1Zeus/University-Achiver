@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('file_path')->nullable();
             $table->integer('state')->default(1);
             $table->string('address', 120);
-            $table->date('date');
+            $table->date('start_at');
+            $table->date('end_at')->nullable();
             $table->timestamps();
         });
     }
