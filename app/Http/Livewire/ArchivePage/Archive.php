@@ -6,11 +6,16 @@ use App\Models\Event;
 use Livewire\Component;
 
 class Archive extends Component
-{
-    public function render()
+{   protected $listeners = ['$refresh', 'search'];
+    public $search;
+    public function search($search)
     {
+        $this->search = $search;
+    }
+    public function render()
+    {   $search = '%' . $this->search . '%';
         // $this->events = Event::orderByDesc('id')->paginate(30);
-        $this->events = Event::orderByDesc('id')->get();
+        $this->events = Event::where('title', 'LIKE', $search)->orderByDesc('id')->get();
         return view('livewire.archive-page.archive');
     }
 }
