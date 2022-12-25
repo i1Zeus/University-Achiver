@@ -3,6 +3,7 @@
 use App\Http\Livewire\AboutPage\About;
 use App\Http\Livewire\MainPage\Main;
 use App\Http\Livewire\ArchivePage\Archive;
+use App\Http\Livewire\Ui\ShowCard;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,4 @@ Route::middleware([
 Route::get('/', Main::class)->name('main');
 Route::get('/about', About::class)->name('about');
 Route::get('/archive', Archive::class)->name('archive');
+Route::get('/show/{id}', ShowCard::class)->name('show-card');
