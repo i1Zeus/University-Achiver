@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('event_id')->constrained('events');
             $table->string('name');
             $table->string('email')->nullable();
+            $table->string('adjective')->nullable();
             $table->timestamps();
         });
     }
