@@ -11,7 +11,7 @@ class LastEvents extends Component
     {
         //return last three events
         $this->events=Event::orderByDesc('id')->take(3)->get();
-        dd($this->events->toArray());
+        // dd($this->events->toArray());
         return view('livewire.main-page.last-events');
     }
 }

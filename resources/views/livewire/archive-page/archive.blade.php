@@ -1,6 +1,6 @@
 <div>
-    <div class="flex justify-center items-center mt-25 w-full h-full">
-        <div class="flex flex-col gap-28 justify-center items-center">
+    <div class="flex items-center justify-center w-full h-full mt-25">
+        <div class="flex flex-col items-center justify-center gap-28">
             <form>
                 <label for="default-search"
                     class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -13,15 +13,15 @@
                         </svg>
                     </div>
                     <input type="search" id="default-search"
-                        class="block w-700px p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-secondery-100 focus:border-secondery-100 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secondery-100 dark:focus:border-secondery-100"
+                        class="block p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-700px bg-gray-50 focus:ring-secondery-100 focus:border-secondery-100 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-secondery-100 dark:focus:border-secondery-100"
                         placeholder="ابحث عن حدث .." required>
                 </div>
             </form>
 
-            <div class="grid gap-12 justify-evenly grid-cols-1 md:grid-cols-3 pb-20">
-                @for ($i = 1; $i <= 6; $i++)
-                    <livewire:ui.event-card />
-                @endfor
+            <div class="grid grid-cols-1 gap-12 pb-20 justify-evenly md:grid-cols-3">
+                @foreach ($events as $event)
+                    <livewire:ui.event-card :event="$event" key="{{ now() }}" />
+                @endforeach
             </div>
         </div>
     </div>

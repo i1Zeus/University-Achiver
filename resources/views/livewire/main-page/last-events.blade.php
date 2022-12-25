@@ -8,9 +8,9 @@
                 <livewire:ui.event-card :event="$event" />
             @endforeach --}}
         <div class="flex gap-12 justify-evenly">
-            @for ($i = 1; $i <= 3; $i++)
-                <livewire:ui.event-card />
-            @endfor
+            @foreach ($events as $event)
+                <livewire:ui.event-card :event="$event" key="{{ now() }}" />
+            @endforeach
         </div>
     </div>
 </div>
