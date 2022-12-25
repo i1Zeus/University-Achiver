@@ -4,9 +4,15 @@
             @livewire('ui.search')
 
             <div class="grid grid-cols-1 gap-12 pb-20 justify-evenly md:grid-cols-3">
-                @foreach ($events as $event)
+                @forelse ($events as $event)
                     <livewire:ui.event-card :event="$event" key="{{ now() }}" />
-                @endforeach
+                @empty
+                    <div class="flex items-center justify-center w-full h-full">
+                       
+                            <h1 class="text-3xl font-bold ">لا يوجد نتائج</h1>
+                       </div>
+
+                    @endforelse
             </div>
         </div>
     </div>
