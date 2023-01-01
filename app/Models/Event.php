@@ -8,23 +8,49 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'image_path', 'file_path', 'state', 'address', 'start_time', 'end_time','day'];
+    protected $fillable = ['title', 'description', 'image_path', 'file_path', 'state', 'address', 'start', 'end'];
 
     public function attendances()
     {
         return $this->hasMany(Attendance::class);
     }
 
-    // public function add_file($file, $type = 1)
-    // { 
-    //     $type = $type == 1 ? 'images' : 'files';
-    //     $ext = $file->extension();
-    //     $name = \Str::random(10) . '.' . $ext;
-    //     $file = $file->storeAs('public/event/' . $this->id . '/' . $type . '/' , $name);
-    //     if ($type == 'images')
-    //         $this->image_path = $name;
-    //     else $this->file_path = $name;
+    ### add ###
+    public function add($data)
+    {
+        $this->fill($data);
+        $this->save();
+    }
+    ### End add ###
 
-    //     $this->save();
-    // }
+    ### edit ###
+    public function edit($data)
+    {
+        $this->update($data);
+    }
+    ### End edit ###
+    
+            ### image ###
+
+    //add_image
+    public function add_image($image)
+    {
+        $ext = $image->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $image = $image->storeAs('public/events/' . $this->id . '/images/', $name);
+        $this->image_path = 'storage/events/' . $this->id . '/images/' . $name;
+        $this->save();
+    }
+
+    //update_image
+    public function update_image($image)
+    {
+        $ext = $image->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $image = $image->storeAs('public/events/' . $this->id . '/images/', $name);
+        $this->image_path = 'storage/events/' . $this->id . '/images/' . $name;
+        $this->save();
+    }
+
+    ### End image ###
 }

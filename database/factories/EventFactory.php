@@ -21,9 +21,8 @@ class EventFactory extends Factory
             'description' => $this->faker->text,
             'state' => $this->faker->numberBetween(0, 1),
             'address' => $this->faker->address,
-            'day'=>$this->faker->date(),
-            'start_time' => $this->faker->time(),
-            'end_time' => $this->faker->time(),
+            'start' => $this->faker->date(),
+            'end' => $this->faker->date(),
         ];
     }
 }

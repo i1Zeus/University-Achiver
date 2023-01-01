@@ -18,12 +18,11 @@ return new class extends Migration
             $table->string('title', 60);
             $table->text('description')->nullable();
             $table->string('image_path')->nullable();
-            $table->string('file_path')->nullable();
+            // $table->string('file_path')->nullable();
             $table->integer('state')->default(1);
             $table->string('address', 120);
-            $table->date('day');
-            $table->time('start_time');
-            $table->time('end_time')->nullable();
+            $table->date('start');
+            $table->date('end')->nullable();
             $table->timestamps();
         });
     }

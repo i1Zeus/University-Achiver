@@ -51,6 +51,8 @@
     @stack('modals')
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
     @livewireScripts
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('vendor/livewire-alert/livewire-alert.js') }}"></script>
 </body>
 
 </html>
