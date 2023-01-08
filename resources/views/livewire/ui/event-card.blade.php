@@ -1,6 +1,6 @@
 <div>
     <a class="relative flex flex-col duration-150 bg-white shadow-lg cursor-pointer gap-10px p-20px w-340px h-350px rounded-15px hover:scale-105"
-        href="{{ route('show-card', ['id' => $event->id]) }}">
+        href="{{ route('show-card', ['event_id' => $event->id]) }}">
         {{-- Place Image --}}
         <img src="{{ asset($event->file_path ?? '/image/Cover.jpg') }}" class="bg-black rounded-md w-300px h-150px" />
         <div class="flex gap-30px">

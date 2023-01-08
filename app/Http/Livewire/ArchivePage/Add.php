@@ -14,16 +14,15 @@ class Add extends Component
 
     public $title, $description, $image_path,  $state, $address, $start, $end;
     protected $rules = [
-        'title' => 'required|min:3|max:60',
+        'title' => 'required',
         'description' => 'required',
-        'address' => 'required|min:3|max:120',
+        'address' => 'required',
         'start' => 'required|date',
         'end' => 'required|date',
     ];
     public function add(Event $event)
     {
         $this->validate();
-
         $data = [
             'title' => $this->title,
             'description' => $this->description,
@@ -32,6 +31,7 @@ class Add extends Component
             'start' => $this->start,
             'end' => $this->end,
         ];
+        
         $event = new Event();
         $event->add($data);
         if ($this->image_path) {

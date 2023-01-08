@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class Archive extends Component
 {   protected $listeners = ['$refresh', 'search'];
-    public $search;
+    public $search,$events; 
     public function search($search)
     {
         $this->search = $search;

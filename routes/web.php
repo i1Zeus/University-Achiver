@@ -33,5 +33,5 @@ Route::middleware([
 Route::get('/', Main::class)->name('main');
 Route::get('/about', About::class)->name('about');
 Route::get('/archive', Archive::class)->name('archive');
-Route::get('/show/{id}', ShowCard::class)->name('show-card');
+Route::get('/show/{event_id}', ShowCard::class)->name('show-card');
 Route::get('/add-event', Add::class)->name('add-event');

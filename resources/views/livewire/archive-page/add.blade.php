@@ -22,14 +22,14 @@
                             <div class="flex flex-col">
                                 <label class="leading-loose">Start</label>
                                 <div class="relative focus-within:text-gray-600 text-gray-400">
-                                    <input wire:model.lazy="start" type="date" class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="25/02/2020">
+                                    <input wire:model.lazy="start" type="date" class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" >
                                     
                                 </div>
                             </div>
                             <div class="flex flex-col">
                                 <label class="leading-loose">End</label>
                                 <div class="relative focus-within:text-gray-600 text-gray-400" >
-                                    <input  wire:model.lazy="end" type="date" class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="26/02/2020">
+                                    <input  wire:model.lazy="end" type="date" class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" >
                                 </div>
                             </div>
                         </div>
