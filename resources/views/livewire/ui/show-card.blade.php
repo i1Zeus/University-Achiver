@@ -18,6 +18,10 @@
                                 <i
                                     class="text-red-500 fa-solid  fa-pen-to-square text-xl duration-200 group-hover:text-red-700 fa-solid fa-trash"></i>
                             </button>
+                            <a href="{{ route('edit-event', ['event_id' => $event->id]) }}">
+                                    <i class="fa-solid fa-pen-to-square text-gray-600   hover:text-blue-700"></i>
+                                    edit
+                                </a>
     </div>
     <div class="basis-1/2 xl:col-span-7 rounded-3xl">
         <img src="{{ asset($event->file_path ?? '/image/Cover.jpg') }}"

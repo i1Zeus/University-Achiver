@@ -5,6 +5,7 @@ use App\Http\Livewire\MainPage\Main;
 use App\Http\Livewire\ArchivePage\{
     Archive,
     Add,
+    Edit,
 };
 use App\Http\Livewire\Ui\ShowCard;
 use Illuminate\Support\Facades\Route;
@@ -35,3 +36,5 @@ Route::get('/about', About::class)->name('about');
 Route::get('/archive', Archive::class)->name('archive');
 Route::get('/show/{event_id}', ShowCard::class)->name('show-card');
 Route::get('/add-event', Add::class)->name('add-event');
+Route::get('/edit-event/{event_id}', Edit::class)->name('edit-event');
+
