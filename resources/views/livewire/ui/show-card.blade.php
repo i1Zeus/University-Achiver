@@ -10,7 +10,7 @@
         </div>
         <div class="flex gap-3 mt-4 mr-8 xl:mt-10 xl:mr-4 md:gap-5">
             <button class="button">
-                <a href="{{ route('main') }}">رجوع</a>
+                <a href="{{ route('archive') }}">رجوع</a>
             </button>
             <button class="button" wire:click="confirm({{ $event->id }})" type="button">
                 <span>حذف </span>
