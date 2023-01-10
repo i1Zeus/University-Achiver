@@ -7,7 +7,7 @@
                         {{ $event->title }}
                     </h1>
                 </div>
-                <div class="w-full px-4 text-xl text-gray-600 xl:px-0">
+                <div class="w-full px-4 text-xl text-gray-700 xl:px-0">
                     {{ $event->description ?? 'لا يوجد وصف' }}
                 </div>
                 <div class="flex gap-3 mt-4 mr-8 xl:mt-10 xl:mr-4 md:gap-5">
