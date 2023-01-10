@@ -7,21 +7,18 @@
                         {{ $event->title }}
                     </h1>
                 </div>
-                <div class="w-full px-4 text-xl text-gray-600 xl:px-0">
+                <div class="w-full px-4 text-xl text-gray-700 xl:px-0">
                     {{ $event->description ?? 'لا يوجد وصف' }}
                 </div>
                 <div class="flex gap-3 mt-4 mr-8 xl:mt-10 xl:mr-4 md:gap-5">
-                    <button class="button">
-                        <a href="{{ route('archive') }}">رجوع</a>
-                    </button>
+                    <a class="button" href="{{ route('archive') }}">رجوع</a>
+
                     <button class="button" wire:click="confirm({{ $event->id }})" type="button">
                         <span>حذف </span>
                     </button>
-                    <button class="button">
-                        <a href="{{ route('edit-event', ['event_id' => $event->id]) }}">
-                            تعديل
-                        </a>
-                    </button>
+                    <a class="button" href="{{ route('edit-event', ['event_id' => $event->id]) }}">
+                        تعديل
+                    </a>
                 </div>
             </div>
             <div>
