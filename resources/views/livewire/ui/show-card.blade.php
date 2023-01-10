@@ -9,7 +9,7 @@
             {{ $event->description ?? 'لا يوجد وصف' }}
         </div>
         <div class="flex gap-3 mt-4 mr-8 xl:mt-10 xl:mr-4 md:gap-5">
-            <a href="{{ route('main') }}"
+            <a href="{{ route('archive') }}"
                 class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">رجوع</a>
         </div>
         <button wire:click="confirm({{ $event->id }})" type="button"
