@@ -11,12 +11,12 @@
                     {{ $event->description ?? 'لا يوجد وصف' }}
                 </div>
                 <div class="flex gap-3 mt-4 mr-8 xl:mt-10 xl:mr-4 md:gap-5">
-                        <a class="button" href="{{ route('archive') }}">رجوع</a>
-                        
+                    <a class="button" href="{{ route('archive') }}">رجوع</a>
+
                     <button class="button" wire:click="confirm({{ $event->id }})" type="button">
                         <span>حذف </span>
                     </button>
-                    <a class="button"  href="{{ route('edit-event', ['event_id' => $event->id]) }}">
+                    <a class="button" href="{{ route('edit-event', ['event_id' => $event->id]) }}">
                         تعديل
                     </a>
                 </div>
