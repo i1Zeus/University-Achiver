@@ -19,12 +19,12 @@
         <div class="flex justify-between">
             {{-- Event Date --}}
             <div class="flex items-center justify-end gap-5px">
-                <span class="iconify text-secondery-100 text-20px" data-icon="ph:clock-fill" />
-                <span class="font-semibold text-black text-15px opacity-45"> {{ $event->start_at }}</span>
+                <span class="iconify text-secondery-100 text-20px" data-icon="ph:clock-fill" ></span>
+                <span class="font-semibold text-black text-15px opacity-45"> {{ $event->start }}</span>
             </div>
             {{-- Event Location --}}
             <div class="flex items-center justify-end gap-5px">
-                <span class="iconify text-secondery-100 text-20px" data-icon="mdi:google-maps" />
+                <span class="iconify text-secondery-100 text-20px" data-icon="mdi:google-maps" ></span>
                 <span class="font-semibold text-black text-15px opacity-45">{{ $event->address }}</span>
             </div>
         </div>
