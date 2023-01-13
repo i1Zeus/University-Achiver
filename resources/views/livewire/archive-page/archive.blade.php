@@ -6,7 +6,7 @@
                 @livewire('ui.search')
 
                 <a href="{{ route('add-event') }}"
-                    class="flex items-center gap-3 px-3 py-1 text-black duration-200 border border-transparent rounded-lg text-md xl:text-xl hover:border-gray-900 hover:text-primary-500 focus:ring-2 focus:ring-gray-900 ml-7 md:px-4 md:py-1">
+                    class="button">
                     {{-- <i class="fa-solid fa-plus"></i> --}}
                     <div class="hidden sm:block"> إضافة حدث</div>
                 </a>
