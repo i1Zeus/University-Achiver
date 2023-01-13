@@ -23,6 +23,7 @@ class EventFactory extends Factory
             'address' => $this->faker->address,
             'start' => $this->faker->date(),
             'end' => $this->faker->date(),
+            'time' => $this->faker->time(),
         ];
     }
 }
