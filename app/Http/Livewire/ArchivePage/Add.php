@@ -26,7 +26,7 @@ class Add extends Component
         $data = [
             'title' => $this->title,
             'description' => $this->description,
-            // 'state' => $this->state,
+            'state' => $this->state,
             'address' => $this->address,
             'start' => $this->start,
             'end' => $this->end,
