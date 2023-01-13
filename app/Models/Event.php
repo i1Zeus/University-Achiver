@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'image_path', 'file_path','time' ,'state', 'address', 'start', 'end'];
+    protected $fillable = ['title', 'description', 'image_loc','image_path', 'file_path','time' ,'state', 'address', 'start', 'end'];
 
     public function attendances()
     {
@@ -37,10 +37,21 @@ class Event extends Model
     {
         $ext = $image->extension();
         $name =  \Str::random(10) . '.' . $ext;
-        $image = $image->storeAs('public/events/' . $this->id . '/images/', $name);
-        $this->image_path = 'storage/events/' . $this->id . '/images/' . $name;
+        $image = $image->storeAs('public/event/' . $this->id . '/images/', $name);
+        $this->image_path = 'storage/event/' . $this->id . '/images/' . $name;
         $this->save();
     }
+
+    public function add_image_loc($image)
+    {
+        $ext = $image->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $image = $image->storeAs('public/event/' . $this->id . '/images/', $name);
+        $this->image_loc = 'storage/event/' . $this->id . '/images/' . $name;
+        $this->save();
+    }
+
+
 
     //update_image
     public function update_image($image)
@@ -49,6 +60,14 @@ class Event extends Model
         $name =  \Str::random(10) . '.' . $ext;
         $image = $image->storeAs('public/events/' . $this->id . '/images/', $name);
         $this->image_path = 'storage/events/' . $this->id . '/images/' . $name;
+        $this->save();
+    }
+    public function update_image_loc($image)
+    {
+        $ext = $image->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $image = $image->storeAs('public/events/' . $this->id . '/images/', $name);
+        $this->image_loc = 'storage/events/' . $this->id . '/images/' . $name;
         $this->save();
     }
 

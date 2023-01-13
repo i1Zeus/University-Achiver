@@ -7,27 +7,6 @@
                         i</div>
                     <div class="self-start block pl-2 text-xl font-semibold text-gray-700">
                         <h2 class="leading-relaxed">انشأ حدث</h2>
-                        <div class="flex justify-center ">
-                            <div class=" text-center">
-                                <label class="w-full flex flex-col items-center   @if ($image_path) bg-primary-700 text-black @else bg-white text-primary-700 @endif rounded-lg tracking-wide   cursor-pointer hover:bg-primary-700 hover:text-black">
-                                    <div wire:target="image_path">
-                                    </div>
-                                    <span class=" text-base leading-normal">
-                                        @if ($image_path)
-                                        تم اختيار صورة
-                                        @else
-                                        إختر صورة
-                                        @endif
-                                    </span>
-                                    <input wire:model.lazy="image_path" type="file" class="hidden" />
-                                </label>
-                                @error('image_path')
-                                <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم
-                                    يتم تحميل
-                                    الصورة</span>
-                                @enderror
-                            </div>
-                        </div>
 
                     </div>
                 </div>
@@ -47,7 +26,7 @@
                             <select wire:model.lazy="state" type="text" class="w-full px-4 py-2 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none ">
                                 <option> اختر نوع الحدث</option>
                                 <option value="0">مؤتمر</option>
-                                <option value="1"> ندوة</option>
+                                <option value="1"> مناقشة بحث</option>
                             </select>
                         </div>
                         <div class="flex flex-col">
@@ -86,6 +65,50 @@
                                 <textarea wire:model.lazy="description" type="text" class="w-full px-4 py-2 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none" placeholder="اختياري">
                         </textarea>
                             </div>
+                            <div class="flex justify-center ">
+                                <div class=" text-center">
+                                    <label class="w-full flex flex-col items-center   @if ($image_path) bg-primary-700 text-black @else bg-white text-primary-700 @endif rounded-lg tracking-wide   cursor-pointer hover:bg-primary-700 hover:text-black">
+                                        <div wire:target="image_path">
+                                        </div>
+                                        <span class=" text-base leading-normal">
+                                            @if ($image_path)
+                                            تم اختيار صورة شخصية
+                                            @else
+                                            إختر صورة شخصية
+                                            @endif
+                                        </span>
+                                        <input wire:model.lazy="image_path" type="file" class="hidden" />
+                                    </label>
+                                    @error('image_path')
+                                    <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم
+                                        يتم تحميل
+                                        الصورة</span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="flex justify-center ">
+                                <div class=" text-center">
+                                    <label class="w-full flex flex-col items-center   @if ($image_loc) bg-primary-700 text-black @else bg-white text-primary-700 @endif rounded-lg tracking-wide   cursor-pointer hover:bg-primary-700 hover:text-black">
+                                        <div wire:target="image_loc">
+                                        </div>
+                                        <span class=" text-base leading-normal">
+                                            @if ($image_loc)
+                                            تم اختيار صورة الموقع
+                                            @else
+                                            إختر صورة الموقع
+                                            @endif
+                                        </span>
+                                        <input wire:model.lazy="image_loc" type="file" class="hidden" />
+                                    </label>
+                                    @error('image_loc')
+                                    <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم
+                                        يتم تحميل
+                                        الصورة</span>
+                                    @enderror
+                                </div>
+                            </div>
+
                         </div>
                         <div class="flex items-center pt-4 space-x-4">
                             <a href="{{ route('archive') }}" class="">

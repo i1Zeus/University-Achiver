@@ -3,12 +3,16 @@
 namespace App\Http\Livewire\ArchivePage;
 use App\Models\Event;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
+use Livewire\WithFileUploads;
+
 use Livewire\Component;
 
 class Edit extends Component
 {
     use LivewireAlert;
-    public $title, $description, $image_path,  $state, $address, $start, $end , $new_image ,$event_id ;
+    use WithFileUploads;
+
+    public $title, $description, $image_path,  $state, $address, $start, $end , $new_image, $new_image_loc ,$event_id , $image_loc;
         protected $rules = [
             'title' => 'required',
             'description' => 'required',
@@ -29,6 +33,7 @@ class Edit extends Component
                 $this->address = $event->address;
                 $this->start = $event->start;
                 $this->end = $event->end;
+                $this->image_loc = $event->image_loc;
             }
         }
         public function edit()
@@ -48,9 +53,13 @@ class Edit extends Component
         $event = Event::findOrFail($this->event_id);
         $event->edit($data);
         
-        // if ($this->new_image){
-        //     $event->update_image($this->new_image); 
-        // }
+        if ($this->new_image){
+            $event->update_image_loc($this->new_image); 
+        }
+
+        if($this->new_image_loc){
+            $event->update_image($this->new_image_loc);
+        }
         
         
         $this->alert('success', 'تم التعديل', [

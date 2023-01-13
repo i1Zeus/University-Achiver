@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title', 60);
             $table->text('description')->nullable();
             $table->string('image_path')->nullable();
+            $table->string('image_loc')->nullable();
             // $table->string('file_path')->nullable();
             $table->boolean('state')->default(0);
             $table->string('address', 120);
