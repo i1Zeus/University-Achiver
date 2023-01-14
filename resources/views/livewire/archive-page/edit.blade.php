@@ -80,53 +80,58 @@
                                 placeholder="اختياري">
                         </textarea>
                         </div>
-                        <div class="flex justify-end gap-4">
-                            <div class="flex justify-center ">
-                                <div class="text-center">
-                                    <label
-                                        class="w-full flex flex-col items-center duration-100 hover:shadow-md @if ($new_image_loc) bg-primary-200 text-black @else bg-white @endif rounded-lg tracking-wide p-2 cursor-pointer hover:bg-primary-200 text-black">
-                                        <div wire:target="new_image">
+                        <div class="flex justify-end gap-4 p-t-2">
+                                @if ($state == 1)
+                                    <div class="flex justify-center ">
+                                        <div class="text-center ">
+                                            <label
+                                                class="w-full flex flex-col items-center duration-100 hover:shadow-md @if ($image_path) bg-primary-200 text-black @else bg-white @endif rounded-lg tracking-wide p-2 cursor-pointer hover:bg-primary-200 text-black">
+                                                <div wire:target="image_path">
+                                                </div>
+                                                <span class="text-base leading-normal ">
+                                                    @if ($image_path)
+                                                        تم اختيار صورة شخصية
+                                                    @else
+                                                        إختر صورة شخصية
+                                                    @endif
+                                                </span>
+                                                <input wire:model.lazy="image_path" type="file" required
+                                                    class="hidden" />
+                                            </label>
+                                            @error('image_path')
+                                                <span
+                                                    class="px-2 py-1 text-xs rounded-lg error text-primary-600 bg-primary-100">لم
+                                                    يتم تحميل
+                                                    الصورة</span>
+                                            @enderror
                                         </div>
-                                        <span class="text-base leading-normal ">
-                                            @if ($new_image_loc)
-                                                تم اختيار صورة شخصية
-                                            @else
-                                                إختر صورة شخصية
-                                            @endif
-                                        </span>
-                                        <input required wire:model.lazy="new_image_loc" type="file" class="hidden" />
-                                    </label>
-                                    @error('new_image_loc')
-                                        <span class="px-2 py-1 text-xs rounded-lg error text-primary-600 bg-primary-100">لم
-                                            يتم تحميل
-                                            الصورة</span>
-                                    @enderror
-                                </div>
-                            </div>
+                                    </div>
+                                @endif
 
-                            <div class="flex justify-center ">
-                                <div class="text-center ">
-                                    <label
-                                        class="w-full flex flex-col items-center duration-100 hover:shadow-md @if ($new_image) bg-primary-200 text-black @else bg-white @endif rounded-lg tracking-wide p-2 cursor-pointer hover:bg-primary-200 text-black">
-                                        <div wire:target="new_image">
-                                        </div>
-                                        <span class="text-base leading-normal ">
-                                            @if ($new_image)
-                                                تم اختيار صورة الموقع
-                                            @else
-                                                إختر صورة الموقع
-                                            @endif
-                                        </span>
-                                        <input wire:model.lazy="new_image" type="file" class="hidden" />
-                                    </label>
-                                    @error('new_image')
-                                        <span class="px-2 py-1 text-xs rounded-lg error text-primary-600 bg-primary-100">لم
-                                            يتم تحميل
-                                            الصورة</span>
-                                    @enderror
+                                <div class="flex justify-center ">
+                                    <div class="text-center ">
+                                        <label
+                                            class="w-full flex flex-col items-center duration-100 hover:shadow-md @if ($image_loc) bg-primary-200 text-black @else bg-white @endif rounded-lg tracking-wide p-2 cursor-pointer hover:bg-primary-200 text-black">
+                                            <div wire:target="image_loc">
+                                            </div>
+                                            <span class="text-base leading-normal ">
+                                                @if ($image_loc)
+                                                    تم اختيار صورة الموقع
+                                                @else
+                                                    إختر صورة الموقع
+                                                @endif
+                                            </span>
+                                            <input wire:model.lazy="image_loc" required type="file" class="hidden" />
+                                        </label>
+                                        @error('image_loc')
+                                            <span
+                                                class="px-2 py-1 text-xs rounded-lg error text-primary-600 bg-primary-100">لم
+                                                يتم تحميل
+                                                الصورة</span>
+                                        @enderror
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
                     <div class="flex items-center pt-4 space-x-4">
                         <a href="{{ route('archive') }}" class="">

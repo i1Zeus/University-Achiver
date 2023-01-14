@@ -12,14 +12,15 @@ class Edit extends Component
     use LivewireAlert;
     use WithFileUploads;
 
-    public $title, $description, $image_path, $state, $address, $start, $end , $new_image, $new_image_loc ,$event_id , $image_loc;
+    public $title, $description, $image_path, $state, $address, $start, $end , $new_image, $new_image_loc ,$event_id , $image_loc , $time;
         protected $rules = [
             'title' => 'required',
             'description' => 'required',
             'state' => 'required',
             'address' => 'required',
             'start' => 'required',
-            'end' => 'required ',
+            // 'end' => 'required ',
+            'time' => 'required',
         ];
         public function mount ($event_id)
         {
@@ -34,6 +35,7 @@ class Edit extends Component
                 $this->start = $event->start;
                 $this->end = $event->end;
                 $this->image_loc = $event->image_loc;
+                $this->time = $event->time;
             }
         }
         public function edit()
@@ -43,13 +45,13 @@ class Edit extends Component
             $data = [
                 'title' => $this->title,
                 'description' => $this->description,
-                // 'state' => $this->state,
+                'state' => $this->state,
                 'address' => $this->address,
                 'start' => $this->start,
                 'end' => $this->end,
+                'time' => $this->time,
             ];
         
-
         $event = Event::findOrFail($this->event_id);
         $event->edit($data);
         

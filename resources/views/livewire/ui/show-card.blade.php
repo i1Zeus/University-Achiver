@@ -4,7 +4,7 @@
             <div class="flex flex-col w-full gap-3">
                 <div class="flex flex-col gap-8">
                     <div class="flex items-center ">
-                        @if ($event->image_path)
+                        @if ($event->state == 1)
                             <img src="{{ asset($event->image_path) }}" class="w-[120px] rounded-full">
                         @endif
                         <h1 class="p-3 text-4xl font-bold capitalize text-secondary-900 md:text-3xl xl:text-5xl">
@@ -30,6 +30,14 @@
                                 </div>
                                 <p class="overflow-hidden text-black truncate text-[18px] opacity-[70%]">
                                     {{ $event->address }}
+                                </p>
+                            </div>
+                            <!-- الوقت  -->
+                            <div class="flex items-center w-[62%] gap-5px">
+                                <span class="iconify !w-[24px] !h-[24px] text-secondery-100 text-[24px]"
+                                    data-icon="mdi:clock-outline"> </span>
+                                    <p class="overflow-hidden text-black truncate text-[18px] opacity-[70%]">
+                                    {{ $event->time }}
                                 </p>
                             </div>
                         </div>
