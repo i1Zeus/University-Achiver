@@ -12,20 +12,20 @@
                         </h1>
                     </div>
                     <div>
-                        <div class="flex items-center justify-start">
+                        <div class="flex flex-col items-start justify-start">
                             {{-- Event Date --}}
-                            <div class="flex items-center w-[38%] gap-5px">
-                                <span class="!w-[24px] !h-[24px] iconify text-secondery-100 text-24px"
+                            <div class="flex items-center w-[80%] gap-5px">
+                                <span class="!w-[24px] !h-[24px] iconify text-gray-700 text-24px"
                                     data-icon="ph:clock-fill"></span>
                                 <p class="text-black opacity-[70%] text-[18px]"> {{ $event->start }}</p>
-                                <p class="text-black opacity-[70%] text-[18px]">-</p>
-                                <p class="text-black opacity-[70%] text-[18px]"> {{ $event->end }}</p>
+                                <p class="text-black opacity-[70%] text-[18px]"> - {{ $event->end }}</p>
+                                <p class="text-black opacity-[70%] text-[18px]"> - {{ $event->time }}</p>
                             </div>
                             {{-- Event Location --}}
-                            <div class="flex items-center w-[62%] gap-5px">
+                            <div class="flex items-center w-[80%] gap-5px">
                                 <div>
 
-                                    <span class="iconify !w-[24px] !h-[24px] text-secondery-100 text-[24px]"
+                                    <span class="iconify !w-[24px] !h-[24px] text-gray-700 text-[24px]"
                                         data-icon="mdi:google-maps"></span>
                                 </div>
                                 <p class="overflow-hidden text-black truncate text-[18px] opacity-[70%]">
@@ -52,7 +52,7 @@
             </div>
             <div>
                 <img src="{{ asset($event->image_loc ?? '/image/Cover.jpg') }}"
-                    class="w-[80%] m-auto my-20 rounded-3xl">
+                    class="w-[80%] max-h-[80%] m-auto my-20 rounded-3xl">
             </div>
         </div>
     </div>
