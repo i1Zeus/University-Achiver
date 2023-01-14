@@ -3,7 +3,7 @@
         href="{{ route('show-card', ['event_id' => $event->id]) }}">
         {{-- Place Image --}}
         <img src="{{ asset($event->image_loc ?? '/image/Cover.jpg') }}" class="bg-black rounded-md w-300px h-150px" />
-        @if ($event->image_path)
+        @if ($event->state ==1)
             <div class="flex gap-30px">
                 {{-- Client Iamge --}}
                 <img src="{{ asset($event->image_path ?? '/image/Avatar.png') }}"

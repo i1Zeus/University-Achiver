@@ -15,10 +15,11 @@ class Add extends Component
     public $title, $description, $image_path,  $state, $address, $start, $end, $time, $image_loc;
     protected $rules = [
         'title' => 'required',
+        'state' => 'required',
         'description' => 'required',
         'address' => 'required',
         'start' => 'required|date',
-        'end' => 'required|date',
+        // 'end' => 'required|date',
     ];
     public function add(Event $event)
     {
