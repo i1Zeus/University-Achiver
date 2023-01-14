@@ -12,7 +12,7 @@ class Edit extends Component
     use LivewireAlert;
     use WithFileUploads;
 
-    public $title, $description, $image_path,  $state, $address, $start, $end , $new_image, $new_image_loc ,$event_id , $image_loc;
+    public $title, $description, $image_path, $state, $address, $start, $end , $new_image, $new_image_loc ,$event_id , $image_loc;
         protected $rules = [
             'title' => 'required',
             'description' => 'required',

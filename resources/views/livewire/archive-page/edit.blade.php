@@ -37,26 +37,41 @@
                             <div class="w-1/2 md:col-span-2">
                                 <label class="leading-loose">وقت الحدث</label>
                                 <div class="relative text-gray-400 focus-within:text-gray-600">
-                                    <input required wire:model.lazy="time" type="time"
+                                    <input wire:model.lazy="time" type="time"
                                         class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
                                 </div>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
-                            <div class="flex gap-3 my-6 ">
-                                <div class="relative text-gray-400 focus-within:text-gray-600">
-                                    <input required wire:model.lazy="end" type="date"
-                                        class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
+                            @if ($state == 0)
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex gap-3 my-6 ">
+                                        <div class="relative text-gray-400 focus-within:text-gray-600">
+                                            <input wire:model.lazy="end" required type="date"
+                                                class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
+                                        </div>
+                                        <label class="leading-loose">الى</label>
+
+                                    </div>
+                                    <div class="flex gap-3 my-6 ">
+                                        <div class="relative text-gray-400 focus-within:text-gray-600">
+                                            <input wire:model.lazy="start" required type="date"
+                                                class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
+
+                                        </div>
+                                        <label class="leading-loose">من</label>
+
+                                    </div>
                                 </div>
-                                <label class="leading-loose">الى</label>
-                            </div>
-                            <div class="flex gap-3 my-6 ">
-                                <div class="relative text-gray-400 focus-within:text-gray-600">
-                                    <input required wire:model.lazy="start" type="date"
-                                        class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
+                            @else
+                                <div class="flex flex-col justify-end gap-3 my-6 ">
+                                    <label class="leading-loose">التاريخ</label>
+                                    <div class="relative text-gray-400 focus-within:text-gray-600">
+                                        <input wire:model.lazy="start" required type="date" required
+                                            class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
+                                    </div>
                                 </div>
-                                <label class="leading-loose">من</label>
-                            </div>
+                            @endif
                         </div>
                         <div class="flex flex-col">
                             <label class="leading-loose">وصف الحدث</label>

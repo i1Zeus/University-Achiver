@@ -14,7 +14,7 @@
                     <div>
                         <div class="flex items-center justify-start">
                             {{-- Event Date --}}
-                            <div class="flex items-center w-1/3 gap-5px">
+                            <div class="flex items-center w-[38%] gap-5px">
                                 <span class="!w-[24px] !h-[24px] iconify text-secondery-100 text-24px"
                                     data-icon="ph:clock-fill"></span>
                                 <p class="text-black opacity-[70%] text-[18px]"> {{ $event->start }}</p>
@@ -22,7 +22,7 @@
                                 <p class="text-black opacity-[70%] text-[18px]"> {{ $event->end }}</p>
                             </div>
                             {{-- Event Location --}}
-                            <div class="flex items-center w-[67%] gap-5px">
+                            <div class="flex items-center w-[62%] gap-5px">
                                 <div>
 
                                     <span class="iconify !w-[24px] !h-[24px] text-secondery-100 text-[24px]"
