@@ -3,7 +3,7 @@
         <div class="flex items-center justify-center w-full pt-2 xl:pr-24">
             <div class="flex flex-col w-full gap-3">
                 <div class="flex items-center ">
-                    <img src="{{ asset($event->image_path ?? '/image/Avatar.png') }}" class="w-[125px] border-secondery-200 rounded-full">
+                    <img src="{{ asset($event->image_path ?? '/image/Avatar.png') }}" class="w-[120px] rounded-full">
                     <h1 class="p-3 text-4xl font-bold capitalize text-secondary-900 md:text-3xl xl:text-5xl">
                         {{ $event->title }}
                     </h1>
@@ -25,7 +25,7 @@
             </div>
             <div>
                 <img src="{{ asset($event->image_loc ?? '/image/Cover.jpg') }}"
-                    class="w-full m-auto my-20 border-2 border-secondery-200 rounded-3xl">
+                    class="w-[80%] m-auto my-20 rounded-3xl">
             </div>
         </div>
     </div>

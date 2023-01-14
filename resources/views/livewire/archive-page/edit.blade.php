@@ -26,33 +26,34 @@
                         </div>
                         <div class="md:col-span-2">
                             <label class="leading-loose"> نوع الحدث </label>
-                            <select wire:model.lazy="state" type="text" class="w-full px-4 py-2 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none ">
+                            <select wire:model.lazy="state" type="text"
+                                class="w-full px-4 py-2 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none ">
                                 <option> اختر نوع الحدث</option>
                                 <option value="0">مؤتمر</option>
                                 <option value="1"> مناقشة بحث</option>
                             </select>
                         </div>
                         <label class="leading-loose">وقت الحدث</label>
-                            <div class="relative text-gray-400 focus-within:text-gray-600">
-                                <input wire:model.lazy="time" type="time" class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <div class="flex gap-3 my-6 ">
-                                    <div class="relative text-gray-400 focus-within:text-gray-600">
-                                        <input wire:model.lazy="end" type="date" class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
-                                    </div>
-                                    <label class="leading-loose">الى</label>
-
+                        <div class="relative text-gray-400 focus-within:text-gray-600">
+                            <input wire:model.lazy="time" type="time"
+                                class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex gap-3 my-6 ">
+                                <div class="relative text-gray-400 focus-within:text-gray-600">
+                                    <input wire:model.lazy="end" type="date"
+                                        class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
                                 </div>
-                                <div class="flex gap-3 my-6 ">
-                                    <div class="relative text-gray-400 focus-within:text-gray-600">
-                                        <input wire:model.lazy="start" type="date" class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
-
-                                    </div>
-                                    <label class="leading-loose">من</label>
-
-                                </div>
+                                <label class="leading-loose">الى</label>
                             </div>
+                            <div class="flex gap-3 my-6 ">
+                                <div class="relative text-gray-400 focus-within:text-gray-600">
+                                    <input wire:model.lazy="start" type="date"
+                                        class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
+                                </div>
+                                <label class="leading-loose">من</label>
+                            </div>
+                        </div>
                         <div class="flex flex-col">
                             <label class="leading-loose">وصف الحدث</label>
                             <textarea wire:model.lazy="description" type="text"
@@ -61,48 +62,50 @@
                         </textarea>
                         </div>
                         <div class="flex justify-center ">
-                                <div class=" text-center">
-                                    <label class="w-full flex flex-col items-center   @if ($new_image) bg-primary-700 text-black @else bg-white text-primary-700 @endif rounded-lg tracking-wide   cursor-pointer hover:bg-primary-700 hover:text-black">
-                                        <div wire:target="new_image">
-                                        </div>
-                                        <span class=" text-base leading-normal">
-                                            @if ($new_image)
+                            <div class="text-center ">
+                                <label
+                                    class="w-full flex flex-col items-center   @if ($new_image_loc) bg-primary-700 text-black @else bg-white text-primary-700 @endif rounded-lg tracking-wide   cursor-pointer hover:bg-primary-700 hover:text-black">
+                                    <div wire:target="new_image_loc">
+                                    </div>
+                                    <span class="text-base leading-normal ">
+                                        @if ($new_image_loc)
                                             تم اختيار صورة شخصية
-                                            @else
+                                        @else
                                             إختر صورة شخصية
-                                            @endif
-                                        </span>
-                                        <input wire:model.lazy="new_image" type="file" class="hidden" />
-                                    </label>
-                                    @error('new_image')
-                                    <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم
+                                        @endif
+                                    </span>
+                                    <input wire:model.lazy="new_image_loc" type="file" class="hidden" />
+                                </label>
+                                @error('new_image_loc')
+                                    <span class="px-2 py-1 text-xs rounded-lg error text-primary-600 bg-primary-100">لم
                                         يتم تحميل
                                         الصورة</span>
-                                    @enderror
-                                </div>
+                                @enderror
                             </div>
+                        </div>
 
-                            <div class="flex justify-center ">
-                                <div class=" text-center">
-                                    <label class="w-full flex flex-col items-center   @if ($new_image_loc) bg-primary-700 text-black @else bg-white text-primary-700 @endif rounded-lg tracking-wide   cursor-pointer hover:bg-primary-700 hover:text-black">
-                                        <div wire:target="new_image_loc">
-                                        </div>
-                                        <span class=" text-base leading-normal">
-                                            @if ($new_image_loc)
+                        <div class="flex justify-center ">
+                            <div class="text-center ">
+                                <label
+                                    class="w-full flex flex-col items-center   @if ($new_image) bg-primary-700 text-black @else bg-white text-primary-700 @endif rounded-lg tracking-wide   cursor-pointer hover:bg-primary-700 hover:text-black">
+                                    <div wire:target="new_image">
+                                    </div>
+                                    <span class="text-base leading-normal ">
+                                        @if ($new_image)
                                             تم اختيار صورة الموقع
-                                            @else
+                                        @else
                                             إختر صورة الموقع
-                                            @endif
-                                        </span>
-                                        <input wire:model.lazy="new_image_loc" type="file" class="hidden" />
-                                    </label>
-                                    @error('new_image_loc')
-                                    <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم
+                                        @endif
+                                    </span>
+                                    <input wire:model.lazy="new_image" type="file" class="hidden" />
+                                </label>
+                                @error('new_image')
+                                    <span class="px-2 py-1 text-xs rounded-lg error text-primary-600 bg-primary-100">لم
                                         يتم تحميل
                                         الصورة</span>
-                                    @enderror
-                                </div>
+                                @enderror
                             </div>
+                        </div>
                     </div>
                     <div class="flex items-center pt-4 space-x-4">
                         <a href="{{ route('archive') }}" class="">
