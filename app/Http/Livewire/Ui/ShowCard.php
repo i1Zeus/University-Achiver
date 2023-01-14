@@ -11,7 +11,7 @@ class ShowCard extends Component
 {
     use LivewireAlert;
 
-    public $event, $title, $description ,$image_path ,$state,$address,$start,$end,$event_id;
+    public $event, $title, $description ,$image_path ,$state,$address,$start,$end,$event_id, $image_loc;
 
     protected $listeners = ['delete', '$refresh'];
 
