@@ -28,7 +28,7 @@
                         <div class="flex gap-4">
                             <div class="w-1/2 md:col-span-2">
                                 <label class="leading-loose"> نوع الحدث </label>
-                                <select wire:model.lazy="state" type="text"
+                                <select wire:model.lazy="state" required type="text"
                                     class="w-full px-4 py-2 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none ">
                                     <option> اختر نوع الحدث</option>
                                     <option value="0">مؤتمر</option>
@@ -38,7 +38,7 @@
                             <div class="flex-col w-1/2">
                                 <label class="leading-loose">وقت الحدث</label>
                                 <div class="relative text-gray-400 focus-within:text-gray-600">
-                                    <input wire:model.lazy="time" type="time"
+                                    <input wire:model.lazy="time" required type="time"
                                         class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                                                         إختر صورة شخصية
                                                     @endif
                                                 </span>
-                                                <input wire:model.lazy="image_path" type="file" required
+                                                <input wire:model.lazy="image_path" type="file" 
                                                     class="hidden" />
                                             </label>
                                             @error('image_path')
@@ -123,7 +123,7 @@
                                                     إختر صورة الموقع
                                                 @endif
                                             </span>
-                                            <input wire:model.lazy="image_loc" required type="file" class="hidden" />
+                                            <input wire:model.lazy="image_loc"  type="file" class="hidden" />
                                         </label>
                                         @error('image_loc')
                                             <span
