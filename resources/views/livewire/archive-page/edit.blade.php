@@ -95,7 +95,7 @@
                                                     إختر صورة شخصية
                                                 @endif
                                             </span>
-                                            <input wire:model.lazy="image_path" type="file" required
+                                            <input wire:model.lazy="new_image" type="file" 
                                                 class="hidden" />
                                         </label>
                                         @error('image_path')
@@ -121,7 +121,7 @@
                                                 إختر صورة الموقع
                                             @endif
                                         </span>
-                                        <input wire:model.lazy="image_loc" required type="file" class="hidden" />
+                                        <input wire:model.lazy="new_image_loc"  type="file" class="hidden" />
                                     </label>
                                     @error('image_loc')
                                         <span class="px-2 py-1 text-xs rounded-lg error text-primary-600 bg-primary-100">لم
