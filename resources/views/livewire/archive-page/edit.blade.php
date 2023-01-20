@@ -30,7 +30,7 @@
                                 <select wire:model.lazy="state" required type="text"
                                     class="w-full px-4 py-2 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none ">
                                     <option> اختر نوع الحدث</option>
-                                    <option value="0">مؤتمر</option>
+                                    <option value="0">ندوة</option>
                                     <option value="1"> مناقشة بحث</option>
                                 </select>
                             </div>
@@ -95,8 +95,7 @@
                                                     إختر صورة شخصية
                                                 @endif
                                             </span>
-                                            <input wire:model.lazy="new_image" type="file" 
-                                                class="hidden" />
+                                            <input wire:model.lazy="new_image" type="file" class="hidden" />
                                         </label>
                                         @error('image_path')
                                             <span
@@ -121,7 +120,7 @@
                                                 إختر صورة الموقع
                                             @endif
                                         </span>
-                                        <input wire:model.lazy="new_image_loc"  type="file" class="hidden" />
+                                        <input wire:model.lazy="new_image_loc" type="file" class="hidden" />
                                     </label>
                                     @error('image_loc')
                                         <span class="px-2 py-1 text-xs rounded-lg error text-primary-600 bg-primary-100">لم
