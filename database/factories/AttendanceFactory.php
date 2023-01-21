@@ -16,11 +16,11 @@ class AttendanceFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'event_id' => $this->faker->numberBetween(1, 10),
-            'name' => $this->faker->name,
-            'email' => $this->faker->unique()->safeEmail,
-            'adjective' => $this->faker->word,
-        ];
+        // return [
+        //     'event_id' => $this->faker->numberBetween(1, 10),
+        //     'name' => $this->faker->name,
+        //     'email' => $this->faker->unique()->safeEmail,
+        //     'adjective' => $this->faker->word,
+        // ];
     }
 }

@@ -15,38 +15,38 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
-        // //1
-        // Event::create([
-        //     'title' => 'Event 1',
-        //     'description' => 'Event 1 description',
-        //     'state' => 1,
-        //     'address' => 'Address 1',
-        //     'day'=>'2021-01-01',
-        //     'start' => '2021-01-01',
-        //     'end' => '2021-01-01',
-        //     'time' => '8:30'
-        // ]);
-        // //2
-        // Event::create([
-        //     'title' => 'Event 2',
-        //     'description' => 'Event 2 description',
-        //     'state' => 1,
-        //     'address' => 'Address 2',
-        //     'day'=>'2021-01-01',
-        //     'start_time' => '2021-01-01',
-        //     'end_time' => '2021-01-01',
-        // ]);
+        //1
+        Event::create([
+            'title' => 'Event 1',
+            'description' => 'Event 1 description',
+            'state' => 1,
+            'address' => 'Address 1',
+            'time'=>'2021-01-01',
+            'start' => '2021-01-01',
+            'end' => '2021-01-01',
+            'time' => '8:30'
+        ]);
+        //2
+        Event::create([
+            'title' => 'Event 2',
+            'description' => 'Event 2 description',
+            'state' => 1,
+            'address' => 'Address 2',
+            'time'=>'09:30',
+            'start' => '2021-01-01',
+            'end' => '2021-01-01',
+        ]);
 
-        // //3
-        // Event::create([
-        //     'title' => 'Event 3',
-        //     'description' => 'Event 3 description',
-        //     'state' => 1,
-        //     'address' => 'Address 3',
+        //3
+        Event::create([
+            'title' => 'Event 3',
+            'description' => 'Event 3 description',
+            'state' => 1,
+            'address' => 'Address 3',
 
-        //     'day'=>'2021-01-01',
-        //     'start_time' => '2021-01-01',
-        //     'end_time' => '2021-01-01',
-        // ]);
+            'time'=>'09:30',
+            'start' => '2021-01-01',
+            'end' => '2021-01-01',
+        ]);
     }
 }

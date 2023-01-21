@@ -27,8 +27,8 @@ class DatabaseSeeder extends Seeder
         $this->call(EventSeeder::class);
         $this->call(AttendanceSeeder::class);
 
-        Event::factory()->count(10)->create();
-        Attendance::factory()->count(100)->create();
+        // Event::factory()->count(10)->create();
+        // Attendance::factory()->count(100)->create();
     }
 
 }
