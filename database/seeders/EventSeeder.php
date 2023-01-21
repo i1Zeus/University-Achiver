@@ -22,10 +22,10 @@ class EventSeeder extends Seeder
         //     'state' => 1,
         //     'address' => 'Address 1',
         //     'day'=>'2021-01-01',
-        //     'start_time' => '2021-01-01',
-        //     'end_time' => '2021-01-01',
+        //     'start' => '2021-01-01',
+        //     'end' => '2021-01-01',
+        //     'time' => '8:30'
         // ]);
-
         // //2
         // Event::create([
         //     'title' => 'Event 2',

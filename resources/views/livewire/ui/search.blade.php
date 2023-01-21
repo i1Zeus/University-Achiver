@@ -9,7 +9,7 @@
             </svg>
         </div>
         <input type="search" id="search" wire:model="search"
-            class="block p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-700px bg-gray-50 focus:ring-secondery-100 focus:border-secondery-100"
+            class="block p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-700px bg-gray-50 "
             placeholder="ابحث عن حدث .." required>
     </div>
 </div>

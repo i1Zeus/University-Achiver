@@ -8,9 +8,14 @@
                 <livewire:ui.event-card :event="$event" />
             @endforeach --}}
         <div class="flex gap-12 justify-evenly">
-            @foreach ($events as $event)
+            @forelse ($events as $event)
                 <livewire:ui.event-card :event="$event" key="{{ now() }}" />
-            @endforeach
+                @empty
+                <div class="flex flex-col items-center justify-center p-10 ">
+                    <div class="flex flex-col items-center justify-center">
+                        <span class="text-2xl font-semibold">لا توجد احداث</span>
+                    </div>
+            @endforelse
         </div>
     </div>
 </div>

@@ -4,10 +4,7 @@
             <div class="flex flex-col w-full gap-3">
                 <div class="flex flex-col gap-8">
                     <div class="flex items-center ">
-                        @if ($event->state == 1)
-                            <img src="{{ asset($event->image_path) }}" class="w-[120px] h-[120px] rounded-full">
-                        @endif
-                        @if ($event->state == 0 && $event->image_path == null)
+                        @if ($event->state == 1 && $event->image_path == null)
                             <img src="/image/Avatar.png" class="w-[120px]  rounded-full">
                         @endif
                         <h1 class="p-3 text-4xl font-bold capitalize text-secondary-900 md:text-3xl xl:text-5xl">

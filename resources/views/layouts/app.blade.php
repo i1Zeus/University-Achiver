@@ -16,8 +16,6 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="https://unpkg.com/windicss-runtime-dom"></script>
-    <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
     <link rel="icon" type="image/png" href="image/logo.svg">
     <!-- <link rel="icon" type="image/png" href="image/archive.png"> -->
@@ -43,6 +41,8 @@
     @livewireScripts
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('vendor/livewire-alert/livewire-alert.js') }}"></script>
+    <script src="https://unpkg.com/windicss-runtime-dom"></script>
+    <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
 </body>
 
 </html>
