@@ -14,4 +14,10 @@ class Attendance extends Model
     {
         return $this->belongsTo(Event::class);
     }
+
+    public function add($data)
+    {
+        $this->fill($data);
+        $this->save();
+    }
 }

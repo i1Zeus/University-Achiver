@@ -2,8 +2,9 @@
 
 namespace App\Http\Livewire\Ui;
 
-use App\Models\Event;
+use App\Models\{Event, Attendance};
 use Jantinnerezo\LivewireAlert\LivewireAlert;
+
 use Livewire\Component;
 
 
@@ -11,7 +12,7 @@ class ShowCard extends Component
 {
     use LivewireAlert;
 
-    public $event, $title, $description ,$image_path ,$state,$address,$start,$end,$event_id, $image_loc;
+    public $event, $title, $description ,$image_path ,$state,$address,$start,$end,$event_id, $image_loc , $attandance;
 
     protected $listeners = ['delete', '$refresh'];
 
