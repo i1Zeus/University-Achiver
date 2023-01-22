@@ -39,5 +39,5 @@ Route::get('/archive', Archive::class)->name('archive');
 Route::get('/show/{event_id}', ShowCard::class)->name('show-card');
 Route::get('/add-event', Add::class)->name('add-event');
 Route::get('/edit-event/{event_id}', Edit::class)->name('edit-event');
-Route::get('/addattendance', Addattendance::class)->name('addattendance');
-Route::get('/qrcode', QRCodeController::class)->name('home.index');
+Route::get('/addattendance/{event_id}', Addattendance::class)->name('addattendance');
+Route::get('/qrcode/{event_id}', QRCodeController::class)->name('home.index');

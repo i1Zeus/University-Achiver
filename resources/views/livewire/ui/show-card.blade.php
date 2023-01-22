@@ -50,6 +50,10 @@
 
                 <div class="flex gap-3 mt-4 mr-8 xl:mt-10 xl:mr-4 md:gap-5">
                     <a class="button" href="{{ route('archive') }}">رجوع</a>
+                    @guest
+                    <a class="button" href="{{ route('home.index' , ['event_id' => $event->id]) }}">انضم للحدث</a>
+                    @endguest
+
                     @auth
                     <button class="button" wire:click="confirm({{ $event->id }})" type="button">
                         <span>حذف </span>
@@ -66,9 +70,7 @@
             </div>
         </div>
     </div>
-    @guest
-    <livewire:archive-page.addattendance :event_id="$event->id" />
-    @endguest
+    
 
     @auth
     <div>
