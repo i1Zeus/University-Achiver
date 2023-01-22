@@ -12,7 +12,7 @@ class Add extends Component
     use LivewireAlert;
     use WithFileUploads;
 
-    public $title, $description, $image_path,  $state, $address, $start, $end, $time, $image_loc;
+    public $title, $description, $image_path,  $state, $address, $start, $end, $time, $image_loc , $file_path;
     protected $rules = [
         'title' => 'required',
         'state' => 'required',
@@ -32,6 +32,7 @@ class Add extends Component
             'start' => $this->start,
             'end' => $this->end,
             'time' => $this->time,
+            
         ];
         
         $event = new Event();
@@ -41,6 +42,9 @@ class Add extends Component
         }
         if ($this->image_loc) {
             $event->add_image_loc($this->image_loc);
+        }
+        if ($this->file_path) {
+            $event->add_file($this->file_path);
         }
 
         $this->reset();

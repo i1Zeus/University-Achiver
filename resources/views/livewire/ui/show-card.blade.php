@@ -4,12 +4,19 @@
             <div class="flex flex-col w-full gap-3">
                 <div class="flex flex-col gap-8">
                     <div class="flex items-center ">
-                        @if ($event->state == 1 && $event->image_path == null)
-                        <img src="/image/Avatar.png" class="w-[120px]  rounded-full">
+                        @if ($event->state == 1 )
+                        <img src="{{ asset($event->image_path ?? '/image/Avatar.png') }}"
+                    class=" bg-red-100 rounded-full w-90px h-90px " />
+                                            @endif
+                        @if ($event->file_path != null)
+                        <button wire:click="download({{ $event->id }})" value="{{ $event->file_path }}" class="text-2xl">
+                            <i class="fa-solid fa-paperclip"></i>
+                        </button>
                         @endif
                         <h1 class="p-3 text-4xl font-bold capitalize text-secondary-900 md:text-3xl xl:text-5xl">
                             {{ $event->title }}
                         </h1>
+
                     </div>
                     <div>
                         <div class="flex flex-col items-start justify-start">
@@ -40,6 +47,7 @@
                 <div class="w-[75%] text-ellipsis px-4 text-2xl text-gray-800 xl:px-0">
                     {{ $event->description ?? 'لا يوجد وصف' }}
                 </div>
+
                 <div class="flex gap-3 mt-4 mr-8 xl:mt-10 xl:mr-4 md:gap-5">
                     <a class="button" href="{{ route('archive') }}">رجوع</a>
                     @auth
@@ -50,6 +58,7 @@
                         تعديل
                     </a>
                     @endauth
+
                 </div>
             </div>
             <div>
@@ -63,14 +72,14 @@
 
     @auth
     <div>
-    <!-- attandance name and email  -->
-    <div class="flex flex-col items-center justify-center w-full mt-10">
-    @foreach ($event->attendances as $attendance)
-    {{ $attendance->name }}
-                {{ $attendance->email }}
-                {{ $attendance->adjective }}
-                @endforeach
-                
+        <!-- attandance name and email  -->
+        <div class="flex flex-col items-center justify-center w-full mt-10">
+            @foreach ($event->attendances as $attendance)
+            {{ $attendance->name }}
+            {{ $attendance->email }}
+            {{ $attendance->adjective }}
+            @endforeach
+
+        </div>
+        @endauth
     </div>
-    @endauth
-</div>

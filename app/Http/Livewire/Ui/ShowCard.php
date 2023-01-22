@@ -59,7 +59,11 @@ class ShowCard extends Component
         ]);
     }
     
-
+    public function download($id)
+    {
+        $event = Event::findOrFail($id);
+        return response()->download(public_path($event->file_path));
+    }
 
     public function render()
     {

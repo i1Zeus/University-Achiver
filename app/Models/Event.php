@@ -72,4 +72,23 @@ class Event extends Model
     }
 
     ### End image ###
+    //add_file
+    public function add_file($file)
+    {
+        $ext = $file->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $file = $file->storeAs('public/pdf/' . $this->id . '/files/', $name);
+        $this->file_path = 'storage/pdf/' . $this->id . '/files/' . $name;
+        $this->save();
+    }
+
+    //update_file
+    public function update_file($file)
+    {
+        $ext = $file->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $file = $file->storeAs('public/pdf/' . $this->id . '/files/', $name);
+        $this->file_path = 'storage/pdf/' . $this->id . '/files/' . $name;
+        $this->save();
+    }
 }
