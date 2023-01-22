@@ -16,20 +16,27 @@ class Addattendance extends Component
         'adjective' => 'required',
     ];
 
+    public function mount($event_id)
+    {
+        $this->event_id = $event_id;
+    }
     
     public function add(Attendance $attendance)
     {
         $this->validate();
         $data = [
+            'event_id' => $this->event_id,
             'name' => $this->name,
             'email' => $this->email,
             'adjective' => $this->adjective,
-            'event_id' => $this->event_id,
+            
         ];
         
         $attendance = new Attendance();
         $attendance->add($data);
-        $this->reset();
+        $this->name = '';
+        $this->email = '';
+        $this->adjective = '';
         $this->alert('success', 'تمت اضافتك بنجاح  ', [
             'position' => 'center',
             'timer' => 3000,
