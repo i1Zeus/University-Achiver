@@ -67,7 +67,7 @@ class EventSeeder extends Seeder
         ]);
         //6
         Event::create([
-            'title' => 'حسين جاسم فهد',
+            'title' => 'محمد عبد الرحمن عبد',
             'description' => 'CONGESTION BASED BALANCING LOAD TRAFFIC
             NEN/ORKS SPEED HIGH IN AVOIDING',
             'state' => 1, //مناقشه بحث
