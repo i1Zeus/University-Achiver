@@ -7,7 +7,7 @@
             <div class="flex gap-30px">
                 {{-- Client Iamge --}}
                 <img src="{{ asset($event->image_path ?? '/image/Avatar.png') }}"
-                    class="absolute bg-red-100 rounded-full w-90px h-90px top-30 left-55" />
+                    class="absolute bg-white rounded-full w-90px h-90px top-30 left-55" />
                 {{-- Cilent Name --}}
                 <span
                     class="text-24px capitalize font-bold text-black absolute top-45 right-33 w-140%">{{ $event->title }}</span>
@@ -21,7 +21,7 @@
         {{-- Client Description --}}
         @if ($event->description)
             <span
-                class="w-[90%] m-auto mt-10 overflow-hidden font-semibold text-md opacity-60">{{ $event->description }}</span>
+                class="w-[90%] m-auto mt-10 overflow-hidden capitalize font-semibold text-md opacity-60">{{ $event->description }}</span>
         @endif
 
         <div class="flex justify-between w-full">
