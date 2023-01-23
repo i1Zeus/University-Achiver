@@ -69,18 +69,38 @@
             </div>
         </div>
     </div>
-
-
     @auth
-        <div>
-            <!-- attandance name and email  -->
-            <div class="flex flex-col items-center justify-center w-full mt-10">
-                @foreach ($event->attendances as $attendance)
-                    {{ $attendance->name }}
-                    {{ $attendance->email }}
-                    {{ $attendance->adjective }}
-                @endforeach
-
+        <div class="flex flex-col gap-4">
+            <h1 class="text-lg font-bold capitalize text-secondary-900 md:text-xl xl:text-2xl">
+                الحضور
+            </h1>
+            <div class="overflow-hidden overflow-x-auto border border-gray-200 rounded-lg">
+                <table class="min-w-full text-sm divide-y divide-gray-200">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 font-medium text-right text-gray-900 whitespace-nowrap">
+                                الأسم
+                            </th>
+                            <th class="px-4 py-2 font-medium text-right text-gray-900 whitespace-nowrap">
+                                البريد الألكتروني
+                            </th>
+                            <th class="px-4 py-2 font-medium text-right text-gray-900 whitespace-nowrap">
+                                الصفه
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        @foreach ($event->attendances as $attendance)
+                            <tr>
+                                <td class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap">
+                                    {{ $attendance->name }}
+                                </td>
+                                <td class="px-4 py-2 text-gray-700 whitespace-nowrap">{{ $attendance->email }}</td>
+                                <td class="px-4 py-2 text-gray-700 whitespace-nowrap">{{ $attendance->adjective }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
-        @endauth
-    </div>
+        </div>
+    @endauth
