@@ -51,16 +51,13 @@
                                                 class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
                                         </div>
                                         <label class="leading-loose">الى</label>
-
                                     </div>
                                     <div class="flex gap-3 my-6 ">
                                         <div class="relative text-gray-400 focus-within:text-gray-600">
                                             <input wire:model.lazy="start" required type="date"
                                                 class="w-full py-2 pl-10 pr-4 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none">
-
                                         </div>
                                         <label class="leading-loose">من</label>
-
                                     </div>
                                 </div>
                             @else
@@ -106,7 +103,6 @@
                                     </div>
                                 </div>
                             @endif
-
                             <div class="flex justify-center ">
                                 <div class="text-center ">
                                     <label
@@ -120,9 +116,10 @@
                                                 إختر صورة الموقع
                                             @endif
                                         </span>
-                                        <input wire:model.lazy="new_image_loc" type="file" class="hidden" />
+                                        @error('image_loc')
+                                            <input wire:model.lazy="new_image_loc" type="file" class="hidden" />
                                             يتم تحميل
-                                    @enderror
+                                        @enderror
                                 </div>
                             </div>
                         </div>
