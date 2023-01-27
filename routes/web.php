@@ -2,12 +2,7 @@
 
 use App\Http\Livewire\AboutPage\About;
 use App\Http\Livewire\MainPage\Main;
-use App\Http\Livewire\ArchivePage\{
-    Archive,
-    Add,
-    Edit,
-    Addattendance,
-};
+use App\Http\Livewire\ArchivePage\{Archive, Add, Edit, Addattendance};
 use App\Http\Livewire\Ui\ShowCard;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\QRCodeController;

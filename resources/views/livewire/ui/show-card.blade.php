@@ -44,7 +44,7 @@
                 <div class="flex gap-3 mt-4 mr-8 xl:mt-10 xl:mr-4 md:gap-5">
                     <a class="button" href="{{ route('archive') }}">رجوع</a>
                     @guest
-                        <a class="button" href="{{ route('home.index', ['event_id' => $event->id]) }}">انضم للحدث</a>
+                        <a class="button" href="{{ route('addattendance', ['event_id' => $event->id]) }}">انضم للحدث</a>
                     @endguest
                     @auth
                         <button class="button" wire:click="confirm({{ $event->id }})" type="button">
@@ -68,7 +68,7 @@
                     class="w-[80%] max-h-[80%] m-auto my-20 rounded-3xl">
             </div>
         </div>
-        <div class="mt-15">{!! DNS2D::getBarcodeHTML('http://127.0.0.1:8000/addattendance/' . $event_id, 'QRCODE', 3, 3) !!}</div>
+        {{-- <div class="mt-15">{!! DNS2D::getBarcodeHTML('http://127.0.0.1:8000/addattendance/' . $event_id, 'QRCODE', 3, 3) !!}</div> --}}
     </div>
     @auth
         <div class="flex flex-col gap-4">
