@@ -40,7 +40,7 @@
                                             </div>
                                         </a>
                                     @empty
-                                        <h1 class="text-3xl font-bold !bg-transparent ">لا يوجد نتائج</h1>
+                                        <h1 class="text-lg font-bold !bg-transparent ">لا توجد نتائج</h1>
                                     @endforelse
                                 </div>
                             </div>
