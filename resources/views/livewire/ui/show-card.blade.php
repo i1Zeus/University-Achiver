@@ -68,6 +68,7 @@
                     class="w-[80%] max-h-[80%] m-auto my-20 rounded-3xl">
             </div>
         </div>
+        <div class="mt-15">{!! DNS2D::getBarcodeHTML('http://127.0.0.1:8000/addattendance/' . $event_id, 'QRCODE', 3, 3) !!}</div>
     </div>
     @auth
         <div class="flex flex-col gap-4">
