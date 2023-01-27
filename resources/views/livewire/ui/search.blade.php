@@ -8,7 +8,7 @@
             </svg>
         </div>
         <input type="search" id="search" wire:model="search"
-            class="block p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-700px bg-gray-50 "
+            class="block p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-700px bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none"
             placeholder="ابحث عن حدث .." required>
     </div>
 </div>
