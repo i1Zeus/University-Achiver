@@ -1,4 +1,5 @@
 <div>
+    {{-- Mian Page Code  --}}
     <div class="flex justify-between mt-20">
         <div class="flex mt-10 w-40% gap-24">
             <div class="flex flex-col gap-80px">
