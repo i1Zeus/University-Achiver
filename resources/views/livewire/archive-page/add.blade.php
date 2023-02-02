@@ -7,14 +7,20 @@
                         class="flex items-center justify-center flex-shrink-0 font-mono text-2xl text-yellow-500 bg-yellow-200 rounded-full h-14 w-14">
                         i</div>
                     <div class="self-start block pl-2 text-xl font-semibold text-gray-700">
-                        <h2 class="leading-relaxed">انشأ حدث</h2>
+                        <h2 class="leading-relaxed">اضافه حدث</h2>
                     </div>
                 </div>
                 <div class="divide-y divide-gray-200">
                     <!--  -->
                     <div class="py-8 space-y-4 text-base leading-6 text-gray-700 sm:text-lg sm:leading-7">
                         <div class="flex flex-col">
-                            <label class="leading-loose">عنوان الحدث</label>
+                            <label class="leading-loose">
+                                @if ($state == 0)
+                                    عنوان الندوة
+                                @else
+                                    عنوان المناقشة
+                                @endif
+                            </label>
                             <input wire:model.lazy="title" required type="text"
                                 class="w-full px-4 py-2 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none"
                                 placeholder="مناقشه بحث تخرج">
@@ -125,7 +131,8 @@
                                                 الصورة</span>
                                         @enderror
                                     </div>
-                                </div>{{-- ? file --}}
+                                </div>
+                                {{-- ? file --}}
                                 <label for="file" class="cursor-pointer mt-1 duration-150 hover:text-[#16a085]">
                                     <i class="fa-solid fa-paperclip"></i>
                                     <input wire:model.lazy="file_path" type="file" class="hidden" id="file">

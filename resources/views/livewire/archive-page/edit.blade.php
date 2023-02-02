@@ -1,4 +1,4 @@
-<div class="relative py-3 sm:max-w-xl sm:mx-auto" dir="ltr">
+<div class="relative py-3 sm:max-w-xl sm:mx-auto">
     <div class="relative px-4 py-10 mx-8 mt-12 bg-white shadow md:mx-0 rounded-3xl sm:p-10">
         <div class="max-w-md mx-auto">
             <div class="flex items-center gap-4 space-x-5">
@@ -13,7 +13,13 @@
                 <form wire:submit.prevent="edit">
                     <div class="py-8 space-y-4 text-base leading-6 text-gray-700 sm:text-lg sm:leading-7">
                         <div class="flex flex-col">
-                            <label class="leading-loose">عنوان الحدث</label>
+                            <label class="leading-loose">
+                                @if ($state == 0)
+                                    عنوان الندوة
+                                @else
+                                    عنوان المناقشة
+                                @endif
+                            </label>
                             <input required wire:model.lazy="title" type="text"
                                 class="w-full px-4 py-2 text-gray-600 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm focus:outline-none"
                                 placeholder="عنوان الحدث">
@@ -122,6 +128,11 @@
                                         @enderror
                                 </div>
                             </div>
+                            {{-- ? file --}}
+                            <label for="file" class="cursor-pointer mt-1 duration-150 hover:text-[#16a085]">
+                                <i class="fa-solid fa-paperclip"></i>
+                                <input wire:model.lazy="new_file" type="file" class="hidden" id="file">
+                            </label>
                         </div>
                     </div>
                     <div class="flex items-center pt-4 space-x-4">
