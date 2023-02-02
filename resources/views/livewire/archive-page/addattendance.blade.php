@@ -11,7 +11,6 @@
                     </div>
                 </div>
                 <div class="divide-y divide-gray-200">
-                    <!--  -->
                     <div class="py-8 space-y-4 text-base leading-6 text-gray-700 sm:text-lg sm:leading-7">
                         <div class="flex flex-col">
                             <label class="leading-loose">الاسم </label>
@@ -50,3 +49,4 @@
             </div>
         </form>
     </div>
+</div>
