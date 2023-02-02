@@ -12,7 +12,7 @@ class Edit extends Component
     use LivewireAlert;
     use WithFileUploads;
 
-    public $title, $description, $image_path, $state, $address, $start, $end , $new_image, $new_image_loc ,$event_id , $image_loc , $time;
+    public $title, $description, $image_path, $state, $address, $start, $end , $new_image, $new_image_loc ,$event_id , $image_loc , $time, $file_path , $new_file;
         protected $rules = [
             'title' => 'required',
             'description' => 'required',
@@ -36,6 +36,7 @@ class Edit extends Component
                 $this->end = $event->end;
                 $this->image_loc = $event->image_loc;
                 $this->time = $event->time;
+                $this->file_path = $event->file_path;
             }
         }
         public function edit()
@@ -62,7 +63,9 @@ class Edit extends Component
         if($this->new_image_loc){
             $event->update_image($this->new_image_loc);
         }
-        
+        if($this->new_file){
+            $event->update_file($this->new_file);
+        }
         
         $this->alert('success', 'تم التعديل', [
             'position' => 'center',

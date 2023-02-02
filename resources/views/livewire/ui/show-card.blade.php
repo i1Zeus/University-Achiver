@@ -20,8 +20,10 @@
                                     data-icon="ph:clock-fill"></span>
                                 {{-- Start --}}
                                 <p class="text-black opacity-[70%] text-[18px]"> {{ $event->start }}</p>
-                                {{-- End --}}
-                                <p class="text-black opacity-[70%] text-[18px]"> - {{ $event->end }}</p>
+                                @if ($event->end)
+                                    {{-- End --}}
+                                    <p class="text-black opacity-[70%] text-[18px]"> - {{ $event->end }}</p>
+                                @endif
                                 {{-- Time --}}
                                 <p class="text-black opacity-[70%] text-[18px]"> - {{ $event->time }}</p>
                             </div>
