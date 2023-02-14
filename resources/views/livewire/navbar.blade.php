@@ -23,13 +23,15 @@
             </a>
             <!-- hidden if user is logged in -->
             @if (!Auth::check())
-                <a href="{{ route('login') }}" class="flex items-center duration-150 cursor-pointer opacity-60 hover:opacity-100 ">
+                <a href="{{ route('login') }}"
+                    class="flex items-center duration-150 cursor-pointer opacity-60 hover:opacity-100 ">
                     @livewire('components.login')
                 </a>
             @else
                 <form method="POST" action="{{ route('logout') }}" x-data>
                     @csrf
-                    <button type="submit" class="flex items-center duration-150 cursor-pointer opacity-60 hover:opacity-100">
+                    <button type="submit"
+                        class="flex items-center duration-150 cursor-pointer opacity-60 hover:opacity-100">
                         @livewire('components.logout')
                     </button>
                 </form>

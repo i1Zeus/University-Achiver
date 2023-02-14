@@ -16,14 +16,11 @@
             <span
                 class="text-24px capitalize font-bold text-black absolute top-45 right-[25px] w-140%">{{ $event->title }}</span>
         @endif
-
-
         {{-- Client Description --}}
         @if ($event->description)
             <span
                 class="w-[90%] m-auto mt-10 overflow-hidden capitalize font-semibold text-md opacity-60">{{ $event->description }}</span>
         @endif
-
         <div class="flex justify-between w-full">
             {{-- Event Date --}}
             <div class="flex items-center justify-start w-1/3 gap-5px">
@@ -33,7 +30,6 @@
             {{-- Event Location --}}
             <div class="flex items-center justify-end w-[67%] gap-5px">
                 <div>
-
                     <span class="iconify !w-[20px] !h-[20px] text-secondery-100 text-20px"
                         data-icon="mdi:google-maps"></span>
                 </div>
@@ -42,5 +38,4 @@
             </div>
         </div>
     </a>
-
 </div>

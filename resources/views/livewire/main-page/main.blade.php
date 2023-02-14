@@ -32,8 +32,8 @@
                                             <div>
                                                 @if ($event->state == 1)
                                                     <p>مناقشة بحث</p>
-                                                @else 
-                                                <p>ندوة</p>
+                                                @else
+                                                    <p>ندوة</p>
                                                 @endif
                                             </div>
                                             <div>
