@@ -10,7 +10,7 @@
         <div class="flex gap-12 justify-evenly">
             @forelse ($events as $event)
                 <livewire:ui.event-card :event="$event" key="{{ now() }}" />
-                @empty
+            @empty
                 <div class="flex flex-col items-center justify-center p-10 ">
                     <div class="flex flex-col items-center justify-center">
                         <span class="text-2xl font-semibold">لا توجد احداث</span>
