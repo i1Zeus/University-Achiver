@@ -46,9 +46,7 @@ class Add extends Component
         if ($this->file_path) {
             $event->add_file($this->file_path);
         }
-
         $this->reset();
-
         $this->alert('success', 'تم اضافة الحدث بنجاح  ', [
             'position' => 'center',
             'timer' => 3000,

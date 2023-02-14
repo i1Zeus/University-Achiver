@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Livewire\MainPage;
-
 use App\Models\Event;
 use Livewire\Component;
-
 class LastEvents extends Component
 {
+    public $events;
     public function render()
     {
         //return last three events

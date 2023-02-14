@@ -15,7 +15,7 @@ class Attendance extends Component
         'email' => 'required|email',
     ];
 
-    public function add(Attendance $attendance)
+    public function add()
     {
         $this->validate();
         $data = [
@@ -25,7 +25,7 @@ class Attendance extends Component
         ];
         
         $attendance = new Attendance();
-        $attendance->add($data);
+        $attendance->create($data);
         $this->reset();
         $this->alert('success', 'تمت اضافتك بنجاح  ', [
             'position' => 'center',
